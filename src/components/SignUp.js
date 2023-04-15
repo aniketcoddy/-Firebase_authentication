@@ -45,7 +45,7 @@ export default function SignUp() {
         const user = res.user
        await updateProfile(user , {
           displayName:userdata.name
-        }).then(console.log("check user",user),navigate('/'))
+        }).then(console.log("check user",user),navigate('/Home'))
       })
       .catch((err) => {
         setDisabled(false)

@@ -30,7 +30,7 @@ export default function Wrapper(props) {
       <Routes>
           <Route path="/signUp" element={ <SignUp />} />
           <Route path="/Login" element={<Login />} />
-          <Route path="/" element={<Home email={loggedEmail}/>} />
+          <Route path="/Home" element={<Home email={loggedEmail}/>} />
       </Routes>
     </BrowserRouter>
       <Design email={loggedEmail} />

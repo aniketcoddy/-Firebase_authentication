@@ -12,6 +12,7 @@ export default function Login() {
 
   const [error, setError] = useState("");
   const [disbaled, setDisabled] = useState(false);
+  const [passHide , setPassHide] = useState(false)
 
   let name, value;
   const getUsUserData = (e) => {
@@ -36,7 +37,7 @@ export default function Login() {
    signInWithEmailAndPassword(auth, userdata.Email, userdata.password)
       .then(async(res) => {
         setDisabled(false);
-        navigate('/')
+        navigate('/Home')
       })
       .catch((err) => {
         setDisabled(false)
@@ -44,6 +45,10 @@ export default function Login() {
         console.log("error", err.message);
       });
   };
+
+  const toggleView=()=>{
+    setPassHide(!passHide)
+ }
 
   return (
     <div>
@@ -87,8 +92,9 @@ export default function Login() {
               <h1 className="font-[Poppins] text-sm text-black font-normal">
                 Password
               </h1>
+              <img src={passHide ? "view.png":"hidden.png"} className="h-5 flex ml-72 xm:ml-56 mt-11 absolute hover:cursor-pointer" onClick={toggleView}/>
               <input
-                type="password"
+               type={passHide ? "text":"password"}
                 name="password"
                 value={userdata.password}
                 onChange={getUsUserData}
