@@ -28,7 +28,7 @@ export default function Wrapper(props) {
       <div className="flex flex-row sm:flex-col sm:gap-0 gap-24">
       <BrowserRouter>
       <Routes>
-          <Route path="/signUp" element={ <SignUp />} />
+          <Route path="/" index element={ <SignUp />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/Home" element={<Home email={loggedEmail}/>} />
       </Routes>

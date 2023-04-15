@@ -11,7 +11,7 @@ export default function Home(props) {
     signOut(auth)
       .then((e) => {
         setDisabled(false);
-        navigate("/signUp");
+        navigate("/");
       })
       .catch((err) => {
         setDisabled(false);

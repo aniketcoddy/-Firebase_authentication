@@ -118,7 +118,7 @@ export default function Login() {
                Create a new account
               </h1>
 
-              <Link to="/signUp">
+              <Link to="/">
                 <h2 className="font-[Poppins] text-sm text-[#476D73] underline font-semibold">
                   Sign Up
                 </h2>
