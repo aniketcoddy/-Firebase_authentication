@@ -30,7 +30,7 @@ export default function Login() {
 
   const postData = (e) => {
     e.preventDefault();
-    if (!userdata.Email || !userdata.password) {      // weare only checking email and paswoird here so thats why name is eleminated
+    if (!userdata.Email || !userdata.password) {      // weare only checking email and password here so thats why name is eleminated
       setError("Please fill all the details...!");
       return;
     }
@@ -41,6 +41,7 @@ export default function Login() {
       .then(async(res) => {
         setDisabled(false);
         navigate('/Home')
+      document.title="Home Page"
       })
       .catch((err) => {
         setDisabled(false)

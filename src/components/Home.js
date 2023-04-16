@@ -11,7 +11,7 @@ export default function Home(props) {
     signOut(auth)                      // signOut function is provided by firebase and by this we can easily signout from the account
       .then((e) => {
         setDisabled(false);
-        navigate("/");                // this navigate us to the signup page again
+        navigate("/");             // this navigate us to the signup page again
       })
       .catch((err) => {
         setDisabled(false);

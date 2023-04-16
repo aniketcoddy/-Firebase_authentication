@@ -12,7 +12,6 @@ export default function SignUp() {
   const [disbaled, setDisabled] = useState(false);       // this state is responsible for showing disablity of signIn and Login button once we click it
   const [passHide , setPassHide] = useState(false)       //this state is responsible for toggle switch of password input field
 
-
   //instead of making state for each and indivisual input field i made an object in a single state and we can using any input field using dot operator
   const [userdata, setUserdata] = useState({
     name: "",                                  //   example -: userData.name
@@ -48,7 +47,7 @@ export default function SignUp() {
         const user = res.user                         
        await updateProfile(user , {          // we get email and password main filed to enter in the firebase but is we want to save name of the user in the database then we can use updateProfile methos provided by firebase 
           displayName:userdata.name            // display name is the field mentioned in the database of firebase so we can update the name in display name 
-        }).then(console.log("check user",user),navigate('/Home'))  // as soon as we done with the signUp and all the data has been saved then navigate to the home page as a new user to the website
+        }).then(console.log("check user",user),navigate('/Home'),document.title="Home Page")  // as soon as we done with the signUp and all the data has been saved then navigate to the home page as a new user to the website
       })
       .catch((err) => {
         setDisabled(false)    
