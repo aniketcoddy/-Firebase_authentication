@@ -2,6 +2,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth} from "firebase/auth";
 
+ // this is the firebase functionality provided by the server so we can use signIn Login and signout methods
 
 const firebaseConfig = {
   apiKey: "AIzaSyCahoyOgcfC8rktAkFgVO78DxTYVcuqVAM",
@@ -15,6 +16,6 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-const auth= getAuth()
+const auth= getAuth()       //getAuth is assigned to auth and now we can use auth anywhere in the programme
 
-export {app , auth}
+export {app , auth}        

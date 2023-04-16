@@ -1,18 +1,21 @@
 import React, { useState } from "react";
-import { Link , Navigate, useNavigate } from "react-router-dom";
+import { Link , useNavigate } from "react-router-dom";
 import {  signInWithEmailAndPassword} from "firebase/auth";
 import { auth } from "../components/Firebase";
 
+//This page id 90% similar to the signUp page
+
 export default function Login() {
   const navigate = useNavigate()
-  const [userdata, setUserdata] = useState({
+  const [userdata, setUserdata] = useState({   //we only use email and password to login so we deduct name field
     Email: "",
-    password: "",
+    password: "",                                    
   });
 
-  const [error, setError] = useState("");
+
+  const [error, setError] = useState("");                
   const [disbaled, setDisabled] = useState(false);
-  const [passHide , setPassHide] = useState(false)
+  const [passHide , setPassHide] = useState(false)  
 
   let name, value;
   const getUsUserData = (e) => {
@@ -27,14 +30,14 @@ export default function Login() {
 
   const postData = (e) => {
     e.preventDefault();
-    if (!userdata.Email || !userdata.password) {
+    if (!userdata.Email || !userdata.password) {      // weare only checking email and paswoird here so thats why name is eleminated
       setError("Please fill all the details...!");
       return;
     }
     setError("");
     setDisabled(true);
 
-   signInWithEmailAndPassword(auth, userdata.Email, userdata.password)
+   signInWithEmailAndPassword(auth, userdata.Email, userdata.password)    // this method is changed here because we are checking and matching the email and password exists in the database
       .then(async(res) => {
         setDisabled(false);
         navigate('/Home')

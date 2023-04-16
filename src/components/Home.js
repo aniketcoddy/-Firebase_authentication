@@ -7,11 +7,11 @@ export default function Home(props) {
   const [disbaled, setDisabled] = useState(false);
 
   const navigate = useNavigate();
-  const postData = () => {
-    signOut(auth)
+  const postData = () => {            // we also have to signOut so we can make another account so this method is making out signout work invoked down in signOut button 
+    signOut(auth)                      // signOut function is provided by firebase and by this we can easily signout from the account
       .then((e) => {
         setDisabled(false);
-        navigate("/");
+        navigate("/");                // this navigate us to the signup page again
       })
       .catch((err) => {
         setDisabled(false);
@@ -48,7 +48,8 @@ export default function Home(props) {
                 Email:
               </h1>
               <h1 className="text-base font-[Poppins] xm:text-xs text-[#255258] font-semibold">
-                {props.email}
+                {props.email}                
+                 {/* the email from which we are signing In fetched in the wrapper component and bring here using props(prop drilling) */}
               </h1>
             </div>
           </div>
