@@ -19,35 +19,35 @@ export default function Home(props) {
   };
 
   return (
-    <div>
-      <div className="m-16">
-        <h1 className="font-[Poppins] font-semibold text-3xl text-[#255258] ">
-          Breeze.ai
-        </h1>
-      </div>
+      <div className="flex flex-col  w-fit ml-24 md:justify-center md:items-center sm:ml-4 xxs:ml-0  xs:ml-9 mt-6 ">
+        <div className="m-6  xs:mt-5 xs:m-0">
+          <h1 className="font-[Poppins] font-semibold 3xl:text-2xl 4xl:text-3xl text-5xl text-[#255258] ">
+            Aniket.SignUp
+          </h1>
+        </div>
 
       <div>
-        <div className=" flex flex-row border-8 rounded-2xl border-[#255258] border-solid ml-56 mt-52 xs:ml-2 xs:mt-20  ">
-          <div className="flex items-center p-3 xm:p-2">
-            <img src="boy.png" className="h-24 xm:h-16" />
+        <div className=" flex flex-row border-8 rounded-2xl xl:ml-0 w-fit border-[#255258] border-solid 4xl:ml-24 ml-56 4xl:mt-40 3xl:mt-32 2xl:mt-20 mt-52 xs:ml-3 xs:mt-20  ">
+          <div className="flex items-center p-3 4xl:p-2 sm:p-0 sm:pl-1 xm:p-2">
+            <img src="boy.png" className="h-56 sm:h-16 xl:h-24 4xl:h-32 2xl:h-28 xm:h-16" />
           </div>
-          <div className="flex flex-col p-5 xm:p-3">
+          <div className="flex flex-col p-7 pr-8 gap-5 4xl:gap-3 xm:p-3">
             <div className=" flex">
-              <h1 className="text-3xl font-[Poppins] xm:text-lg text-[#255258] font-semibold">
+              <h1 className="text-5xl 4xl:text-3xl xl:text-lg sm:text-sm 3xl:text-2xl 2xl:text-xl font-[Poppins] xm:text-lg text-[#255258] font-semibold">
                 ID CARD
               </h1>
             </div>
 
             <div className="flex gap-2 flex-row">
-              <h1 className="text-base xm:text-xs font-[Poppins] text-[#255258] font-normal">
+              <h1 className="text-5xl xm:text-xs 4xl:text-3xl xl:text-lg sm:text-sm 2xl:text-xl 3xl:text-2xl font-[Poppins] text-[#255258] font-normal">
                 You are Logged In With
               </h1>
             </div>
             <div className="flex gap-2 flex-row">
-              <h1 className="text-base font-[Poppins] xm:text-xs text-[#255258] font-normal">
+              <h1 className="text-5xl font-[Poppins] xm:text-xs xxs:text-[11px] xl:text-lg sm:text-sm 2xl:text-xl 3xl:text-2xl 4xl:text-3xl text-[#255258] font-normal">
                 Email:
               </h1>
-              <h1 className="text-base font-[Poppins] xm:text-xs text-[#255258] font-semibold">
+              <h1 className="text-4xl font-[Poppins] xm:text-xs xxs:text-[11px]  xl:text-lg sm:text-sm 2xl:text-xl 3xl:text-2xl 4xl:text-3xl text-[#255258] font-semibold">
                 {props.email}                
                  {/* the email from which we are signing In fetched in the wrapper component and bring here using props(prop drilling) */}
               </h1>
@@ -55,10 +55,10 @@ export default function Home(props) {
           </div>
         </div>
 
-        <div className="flex ml-80 xs:ml-14 xm:ml-9 xxs:ml-8 mt-5">
+        <div className="flex ml-80 xl:ml-48 justify-center xs:ml-14 sm:ml-16 xm:ml-9 xxs:ml-0 mt-5">
           <button
             type="submit"
-            className="w-80 bg-[#27485D] xm:w-60 p-2 rounded-lg font-[Poppins] text-base text-white disabled:bg-red-600 "
+            className="3xl:w-80 xm:w-64 md:w-56 3xl:p-2 sm:p-1 p-4 w-[500px] bg-[#27485D] rounded-lg font-[Poppins] 3xl:text-base text-2xl text-white disabled:bg-red-600 "
             onClick={postData}
             disabled={disbaled}
           >

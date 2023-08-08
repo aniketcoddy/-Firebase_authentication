@@ -27,7 +27,7 @@ export default function Wrapper(props) {
   return (
     // Here we are witnessing the routing so we can jump and navigate from component to another without loading the the page
     <div>
-      <div className="flex flex-row sm:flex-col sm:gap-0 gap-24">
+      <div className="flex flex-row justify-between sm:flex-col sm:gap-0">
         <BrowserRouter>
           <Routes>
             {/* signUp Page is our first user will encounter when someone will open our webpage so thats why it is marked with "/" and declared as index element */}
